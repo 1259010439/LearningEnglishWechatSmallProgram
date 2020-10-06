@@ -1,0 +1,39 @@
+<!--pages/appraisals/appraisals.wxml-->
+
+    <view  wx:if="{{ !ispopup }}" class='allPage'>
+        <view class='question'>{{ choiceList[choiceListSubscript].question}}</view>
+        <view class='authorTime'>
+            <text class='author'>{{choiceList[choiceListSubscript].author}}</text>于
+            <text class='time'>{{choiceList[choiceListSubscript].time}}</text>提供
+        </view>
+        <view class='answer'>
+            <view class="markA {{isChoose==1?'backa':'backb'}}" bindtap='select' data-index="1">
+                {{choiceList[choiceListSubscript].markA}}
+            </view>
+
+            <view class="markB {{isChoose==2?'backa':'backb'}}" bindtap='select' data-index="2">
+                {{choiceList[choiceListSubscript].markB}}
+            </view>
+
+            <view class="markC {{isChoose==3?'backa':'backb'}}"  bindtap='select' data-index="3">
+                {{choiceList[choiceListSubscript].markC}}
+            </view>
+
+            <view class="markD {{isChoose==4?'backa':'backb'}}"  bindtap='select' data-index="4">
+                {{choiceList[choiceListSubscript].markD}}
+            </view>
+        </view>
+        <view class='butt'><button class='sub' bindtap='submit'>确认</button></view>
+    </view>
+
+  
+    <i-modal visible="{{ispopup==1}}" bind:ok="commit">
+      <view>您已经完成所以试题请您提交答案</view>
+    </i-modal>
+  
+    <i-modal visible="{{ispopup==2}}" bind:ok="goBack">
+      <view>您的分数为:{{(correctanswer/choiceList.length)*100}}</view>
+    </i-modal>
+
+  
+

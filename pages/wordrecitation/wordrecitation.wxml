@@ -1,0 +1,39 @@
+<!--pages/wordrecitation/wordrecitation.wxml-->
+ 
+<view wx:if="{{ showState==0 || showState==1 }}" class="container">
+  <view class='word'>{{word}}</view>
+  <view class='phon' bindtap='play'>{{phon}} <image class='play' src='/images/play.svg'></image></view>
+
+  <view class="translation" style="display:{{ ishive ? 'none' : 'flex'}};">
+    <block wx:for="{{test}}" wx:for-item="log">
+      <text class="log-item">{{log}}</text>
+    </block> 
+  </view>
+
+  <view class="webde" >
+    <view class='web'>例句</view>
+      <block wx:for="{{webdetail}}" wx:for-item="we">
+        <view class="web-item-key" style="display:{{ (ishive && showState==1) ? 'none' : 'flex'}}">{{we.key}}</view>
+        <view class="web-item-value" style="display:{{ ishive ? 'none' : 'flex'}}">{{we.value}}</view>
+      </block> 
+  </view>
+</view>
+
+
+<view class='buttonbox' wx:if="{{ ishive }}">
+    <button class='sub' bindtap='know' data-index="1">认识</button>
+    <button class='exit' bindtap='unknow' data-index="2">不认识</button>
+</view>
+
+<view class='buttonbox' wx:if="{{ !ishive && showState!=2}}">
+        <button class='sub' bindtap='next' data-index="1">下一个</button>
+</view>
+
+<view wx:if="{{ showState==2 }}" class='ruleZhezhaoContent'>
+    <view class='ruleZhezhaoText'>
+          <text class='readtime'>答题结束请提交答案</text>
+    </view>
+    <text class='count' bindtap='submitResult'>OK</text>
+  </view>
+
+

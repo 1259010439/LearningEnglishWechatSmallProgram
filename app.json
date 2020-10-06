@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/user/user",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/word/word",
+    "pages/tips/tips",
+    "pages/choice/choice",
+    "pages/article/article",
+    "pages/search/search",
+    "pages/about/about",
+    "pages/tongji/tongji",
+    "pages/setting/setting",
+    "pages/question/question",
+    "pages/errorques/errorques",
+    "pages/randword/randword",
+    "pages/rating/rating",
+    "pages/vocabulary/vocabulary",
+    "pages/wordrecitation/wordrecitation",
+    "pages/class/class",
+    "pages/video/video",
+    "pages/showvideo/showvideo",
+    "pages/appraisals/appraisals",
+    "pages/errChoice/errChoice"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "selectedColor": "#664a2c",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "文章",
+        "iconPath": "/images/book-open.png",
+        "selectedIconPath": "/images/book-open-select.png"
+      },
+      {
+        "pagePath": "pages/vocabulary/vocabulary",
+        "text": "单词模块",
+        "iconPath": "/images/key.png",
+        "selectedIconPath": "/images/key-select.png"
+      },
+      {
+        "pagePath": "pages/class/class",
+        "text": "课程",
+        "iconPath": "/images/smile.png",
+        "selectedIconPath": "/images/smile-select.png"
+      },
+      {
+        "pagePath": "pages/tips/tips",
+        "text": "Tips",
+        "iconPath": "/images/tag.png",
+        "selectedIconPath": "/images/tag-select.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/images/user.png",
+        "selectedIconPath": "/images/user-select.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

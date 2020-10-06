@@ -1,0 +1,46 @@
+<view class='allPage'>
+    <view class='question'>{{ errChoiceList[errChoiceSubScript].question}}</view>
+    <view class='authorTime'>
+        <text class='author'>{{errChoiceList[errChoiceSubScript].author}}</text>于
+        <text class='time'>{{errChoiceList[errChoiceSubScript].time}}</text>提供
+    </view>
+    <view class='answer'>
+        <view class="markA {{errChoiceList[errChoiceSubScript].errCorrectMark ==1?'backa':errChoiceList[errChoiceSubScript].correctMark =='1'?'backc':'backb'}}" 
+        data-index="1">
+            {{errChoiceList[errChoiceSubScript].markA}}
+            <text wx:if="{{errChoiceList[errChoiceSubScript].errCorrectMark ==1}}">错误选项</text>
+            <text wx:if="{{errChoiceList[errChoiceSubScript].correctMark =='1'}}">正确答案</text>
+        </view>
+
+        <view class="markB {{errChoiceList[errChoiceSubScript].errCorrectMark ==2?'backa':errChoiceList[errChoiceSubScript].correctMark =='2'?'backc':'backb'}}" bindtap='select' data-index="2">
+            {{errChoiceList[errChoiceSubScript].markB}}
+            <text wx:if="{{errChoiceList[errChoiceSubScript].errCorrectMark==2}}">错误选项</text>
+            <text wx:if="{{errChoiceList[errChoiceSubScript].correctMark =='2'}}">正确答案</text>
+        </view>
+
+        <view class="markC {{errChoiceList[errChoiceSubScript].errCorrectMark==3?'backa':errChoiceList[errChoiceSubScript].correctMark =='3'?'backc':'backb'}}"  bindtap='select' data-index="3">
+            {{errChoiceList[errChoiceSubScript].markC}}
+            <text wx:if="{{errChoiceList[errChoiceSubScript].errCorrectMark ==3}}">错误选项</text>
+            <text wx:if="{{errChoiceList[errChoiceSubScript].correctMark =='3'}}">正确答案</text>
+        </view>
+
+        <view class="markD {{errChoiceList[errChoiceSubScript].errCorrectMark==4?'backa':errChoiceList[errChoiceSubScript].correctMark =='4'?'backc':'backb'}}"  bindtap='select' data-index="4">
+            {{errChoiceList[errChoiceSubScript].markD}}
+            <text wx:if="{{errChoiceList[errChoiceSubScript].errCorrectMark ==4}}">错误选项</text>
+            <text wx:if="{{errChoiceList[errChoiceSubScript].correctMark =='4'}}">正确答案</text>
+        </view>
+    </view>
+</view>
+
+<view class="tabbox">
+<i-page current="{{ current }}" total="{{errChoiceList.length}}" bind:change="handleChange">
+    <view slot="prev">
+        <i-icon type="return"></i-icon>
+        上一题
+    </view>
+    <view slot="next">
+        下一题
+        <i-icon type="enter"></i-icon>
+    </view>
+</i-page>
+</view>

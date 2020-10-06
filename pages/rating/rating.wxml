@@ -1,0 +1,47 @@
+<!--pages/rating/rating.wxml-->
+<view class="{{ nowType==1?'bigShow':'bigHide' }}">
+    <text class="word">
+        {{ testWord[wordSubScript].word }}
+    </text>
+    <view class='butt'>
+            <button class='sub' bindtap='know' data-index="1">认识</button>
+            <button class='exit' bindtap='know' data-index="2">不认识</button>
+    </view>
+</view>
+
+<view class="{{ nowType==2?'bigShow':'bigHide' }}">
+    <view class='allPage'>
+        <view class='question'>{{ testSingleChoiceList[singleChoiceSubScript].question}}</view>
+        <view class='authorTime'>
+            <text class='author'>{{testSingleChoiceList[singleChoiceSubScript].author}}</text>于
+            <text class='time'>{{testSingleChoiceList[singleChoiceSubScript].time}}</text>提供
+        </view>
+        <view class='answer'>
+            <view class="markA {{isChoose==1?'backa':'backb'}}" bindtap='select' data-index="1">
+                {{testSingleChoiceList[singleChoiceSubScript].markA}}
+            </view>
+
+            <view class="markB {{isChoose==2?'backa':'backb'}}" bindtap='select' data-index="2">
+                {{testSingleChoiceList[singleChoiceSubScript].markB}}
+            </view>
+
+            <view class="markC {{isChoose==3?'backa':'backb'}}"  bindtap='select' data-index="3">
+                {{testSingleChoiceList[singleChoiceSubScript].markC}}
+            </view>
+
+            <view class="markD {{isChoose==4?'backa':'backb'}}"  bindtap='select' data-index="4">
+                {{testSingleChoiceList[singleChoiceSubScript].markD}}
+            </view>
+        </view>
+        <view class='butt'><button class='sub' bindtap='submit'>确认</button></view>
+    </view>
+</view>
+
+<view class="ruleZhezhao {{ nowType==3?'bigShow':'bigHide' }}">
+        <view class='ruleZhezhaoContent'>
+            <view class='ruleZhezhaoText'>
+                 <text class='readtime'>答题结束请提交答案</text>
+            </view>
+            <text class='count' bindtap='submitAnswers'>OK</text>
+        </view>
+</view>

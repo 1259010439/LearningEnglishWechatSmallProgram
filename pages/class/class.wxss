@@ -1,0 +1,18 @@
+/* pages/class/class.wxss */
+.showlevelbox{
+  margin: 5%;
+  border: 1px solid rgba(52, 76, 97, 0.575);  
+  border-radius: 10px; 
+  box-shadow: rgb(73, 71, 71) 7rpx 7rpx 3rpx;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+.showprogress{
+  margin:0 0 5% 5%;
+}
+.showtext{
+  font-family:fantasy;
+  color: lightseagreen;
+  margin:5%;
+}

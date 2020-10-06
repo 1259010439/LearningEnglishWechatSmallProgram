@@ -1,0 +1,4 @@
+/* pages/video/video.wxss */
+.vio{
+  margin:5%;
+}

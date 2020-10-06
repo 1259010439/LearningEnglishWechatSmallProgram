@@ -1,0 +1,21 @@
+<!--pages/about/about.wxml-->
+<view class='pageall'>
+
+<view class='head'>
+  <text class='title'>关于本微信小程序</text>
+  <view class='author-time'>
+    <text class='author'>Gsh</text>
+    <text class='time'>{{time}}</text>
+  </view>  
+</view>
+
+<view class='aboutart'>
+  <text>{{about}}</text>
+  <text>\n</text>
+  <text>哈尔滨理工大学\n</text>
+  <text>软件2016-9\n</text>
+  <text>Gsh</text>
+</view>
+
+<button class='combutton' bindtap='goback'>返回</button>
+</view>

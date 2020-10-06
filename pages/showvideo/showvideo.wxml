@@ -1,0 +1,3 @@
+<view class="box">
+  <video class="videobox" src="{{videoUrl}}" autoplay="true" bindfullscreenchange="isFull"></video>
+</view>

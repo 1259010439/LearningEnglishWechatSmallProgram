@@ -1,0 +1,42 @@
+<!--pages/class/class.wxml-->
+<view class="showlevelbox" bindtap="toVideo" data-index="1">  
+<view class="showtext">level1</view>
+<i-icon wx:if="{{user.userLevel<1}}" type="lock" size="28" color="#80848f" />
+<progress wx:if="{{user.userLevel>=1}}" class="showprogress" percent="{{progressone}} " active show-info ></progress>
+</view>
+
+<view class="showlevelbox" bindtap="toVideo" data-index="2">  
+<view class="showtext">level2</view>
+<i-icon wx:if="{{user.userLevel<2}}" type="lock" size="28" color="#80848f" />
+<progress wx:if="{{user.userLevel>=2}}" class="showprogress" percent="{{progresstwo}} " active show-info />
+</view>
+
+<view class="showlevelbox" bindtap="toVideo" data-index="3">  
+<view class="showtext">level3</view>
+<i-icon wx:if="{{user.userLevel<3}}" type="lock" size="28" color="#80848f" />
+<progress wx:if="{{user.userLevel>=3}}" class="showprogress" percent="{{progressthree}}" show-info />
+</view>
+
+<view class="showlevelbox" bindtap="toVideo" data-index="4">  
+<view class="showtext">level4</view>
+<i-icon wx:if="{{user.userLevel<4}}" type="lock" size="28" color="#80848f" />
+<progress wx:if="{{user.userLevel>=4}}" class="showprogress" percent="{{progressfour}} " active show-info />
+</view>
+
+<view class="showlevelbox" bindtap="toVideo" data-index="5">  
+<view class="showtext">level5</view>
+<i-icon wx:if="{{user.userLevel<5}}" type="lock" size="28" color="#80848f" />
+<progress wx:if="{{user.userLevel>=5}}" class="showprogress" percent="{{progressfive}} " active show-info />
+</view>
+
+<view class="showlevelbox" bindtap="toVideo" data-index="6">  
+<view class="showtext">level6</view>
+<i-icon wx:if="{{user.userLevel<6}}" type="lock" size="28" color="#80848f" />
+<progress wx:if="{{user.userLevel>=6}}" class="showprogress" percent="{{progresssix}} " active show-info />
+</view>
+
+
+<i-toast id="toast" />
+
+
+

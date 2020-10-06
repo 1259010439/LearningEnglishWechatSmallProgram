@@ -1,0 +1,7 @@
+/* pages/showvideo/showvideo.wxss */
+.videobox{
+   width: 100%;
+}
+.box{
+  margin-top:20%; 
+}

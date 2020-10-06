@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "i-radio-group": "../../dist/radio-group/index",
+    "i-radio": "../../dist/radio/index"
+  },
+  "navigationBarBackgroundColor": "#f7f4f4",
+  "navigationBarTitleText": "英火虫-题目详情"
+}

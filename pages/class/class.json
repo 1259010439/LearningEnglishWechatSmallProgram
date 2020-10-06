@@ -1,0 +1,10 @@
+
+{
+  "usingComponents": {
+    "i-button": "../../dist/button/index",
+    "i-alert": "../../dist/alert/index",
+    "i-icon": "../../dist/icon/index",
+    "i-modal": "../../dist/modal/index",
+    "i-toast": "../../dist/toast/index"
+    }
+}

@@ -1,0 +1,25 @@
+<!--pages/vocabulary/vocabulary.wxml-->
+
+<view class="title">{{knowWordNumber}}</view>
+<view class="small-title">已被单词</view>
+
+<view class="secondtitle">
+  <view class="secondtitle-box">
+    <view class="secondtitle-top">40</view>
+    <view class="secondtitle-up">本组单词</view>
+  </view>
+  <view class="secondtitle-box">
+    <view class="secondtitle-top">{{40-nowLearnWordNumber}}</view>
+    <view class="secondtitle-up">本组已背</view>
+  </view>
+  <view class="secondtitle-box">
+    <view class="secondtitle-top">{{nowLearnWordNumber}}</view>
+    <view class="secondtitle-up">本组剩余</view>
+  </view>
+</view>
+
+<button wx:if="{{nowLearnWordNumber!=0}}" class="butt" type="primary" bindtap='wordrecitation'>开始学习</button>
+<button wx:if="{{nowLearnWordNumber==0}}" class="butt" type="primary" bindtap='nextGroup'>本组完成，再来一组</button>
+        
+
+<button class="down" bindtap='searchWord'>单词查询</button>    
